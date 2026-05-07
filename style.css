@@ -202,8 +202,6 @@ h3 {
   }
 }
 
-/* IMMERSIVE SCROLLYTELLING */
-
 .story-wrapper {
   position: relative;
 }
@@ -238,7 +236,8 @@ h3 {
   color: white;
 }
 
-.scene-dark .scene-label {
+.scene-dark .scene-label,
+.scene-final .scene-label {
   color: #ffc77b;
 }
 
@@ -249,22 +248,11 @@ h3 {
   color: #1c1b24;
 }
 
-.scene-light {
-  background:
-    radial-gradient(circle at 80% 70%, rgba(83,119,222,0.3), transparent 35%),
-    linear-gradient(135deg, #fff8ef, #f7efe4);
-  color: #1c1b24;
-}
-
 .scene-final {
   background:
     radial-gradient(circle at 50% 50%, rgba(239,195,89,0.35), transparent 35%),
     linear-gradient(135deg, #1c1b24, #372a56);
   color: white;
-}
-
-.scene-final .scene-label {
-  color: #ffc77b;
 }
 
 .story-glow {
@@ -309,108 +297,6 @@ h3 {
 
 .section {
   padding: 100px 7%;
-}
-
-.two-column {
-  display: grid;
-  grid-template-columns: 0.95fr 1.05fr;
-  gap: 60px;
-  align-items: center;
-}
-
-.quick-points {
-  display: grid;
-  gap: 18px;
-}
-
-.quick-points div {
-  display: grid;
-  grid-template-columns: 70px 1fr;
-  gap: 18px;
-  align-items: center;
-  padding: 22px;
-  border-radius: 26px;
-  background: rgba(255,255,255,0.6);
-  box-shadow: 0 16px 35px rgba(0,0,0,0.07);
-  transition: 0.25s ease;
-}
-
-.quick-points div:hover {
-  transform: translateX(8px);
-}
-
-.quick-points span {
-  font-family: Arial, sans-serif;
-  font-size: 2rem;
-  font-weight: 900;
-  color: #7457d9;
-}
-
-.work-section,
-.skills-section {
-  background:
-    radial-gradient(circle at 15% 20%, rgba(255, 187, 143, 0.35), transparent 32%),
-    radial-gradient(circle at 85% 70%, rgba(116, 87, 217, 0.22), transparent 36%),
-    #fff8ef;
-}
-
-.card-grid,
-.skill-grid,
-.problem-list,
-.project-grid,
-.process-grid,
-.before-after-grid {
-  display: grid;
-  gap: 26px;
-}
-
-.card-grid,
-.skill-grid,
-.problem-list,
-.before-after-grid {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.project-grid {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.process-grid {
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.info-card,
-.skill-card,
-.project-card,
-.problem-list div,
-.process-grid div,
-.before-after-card {
-  padding: 30px;
-  border-radius: 28px;
-  background: rgba(255,255,255,0.65);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
-  transition: 0.3s ease;
-}
-
-.info-card:hover,
-.skill-card:hover,
-.project-card:hover,
-.problem-list div:hover,
-.process-grid div:hover,
-.before-after-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 28px 70px rgba(0,0,0,0.13);
-}
-
-.number,
-.process-grid span {
-  font-family: Arial, sans-serif;
-  font-weight: 900;
-  color: rgba(116,87,217,0.5);
-}
-
-.number {
-  font-size: 2.8rem;
 }
 
 .demo-section {
@@ -505,86 +391,44 @@ h3 {
   cursor: pointer;
 }
 
-.before-after-section {
-  background: #fff8ef;
-}
-
-.before-after-card {
-  min-height: 220px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.before-after-card span {
-  font-size: 3rem;
-  color: #7457d9;
-  margin: 8px 0;
-}
-
-.before,
-.after {
-  font-size: clamp(1.4rem, 2vw, 2rem);
-  font-weight: 700;
-}
-
-.before {
-  color: #6f6675;
-}
-
-.after {
-  color: #1c1b24;
-}
-
-.statement-section {
-  min-height: 55vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 90px 7%;
+.concepts-section,
+.skills-section {
   background:
-    radial-gradient(circle at 20% 30%, rgba(255,117,108,0.32), transparent 32%),
-    radial-gradient(circle at 80% 70%, rgba(83,119,222,0.32), transparent 34%),
-    #f3dcca;
+    radial-gradient(circle at 15% 20%, rgba(255, 187, 143, 0.35), transparent 32%),
+    radial-gradient(circle at 85% 70%, rgba(116, 87, 217, 0.22), transparent 36%),
+    #fff8ef;
 }
 
-.statement-section h2 {
-  max-width: 900px;
+.project-grid,
+.skill-grid {
+  display: grid;
+  gap: 26px;
 }
 
-.problem-section {
-  background: linear-gradient(135deg, rgba(28,27,36,0.97), rgba(55,42,86,0.94));
-  color: white;
+.project-grid {
+  grid-template-columns: repeat(3, 1fr);
 }
 
-.problem-section .section-label {
-  color: #ffc77b;
+.skill-grid {
+  grid-template-columns: repeat(3, 1fr);
 }
 
-.problem-list div {
-  background: rgba(255,255,255,0.08);
-}
-
-.problem-list p {
-  color: rgba(255,255,255,0.82);
-}
-
-.project-card {
-  min-height: 280px;
+.project-card,
+.skill-card {
+  min-height: 260px;
+  padding: 30px;
+  border-radius: 28px;
+  background: rgba(255,255,255,0.65);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
   position: relative;
   overflow: hidden;
 }
 
-.project-card::after {
-  content: "";
-  position: absolute;
-  width: 220px;
-  height: 220px;
-  right: -80px;
-  bottom: -90px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(116,87,217,0.16), transparent 70%);
+.project-card:hover,
+.skill-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 28px 70px rgba(0,0,0,0.13);
 }
 
 .glow-dot {
@@ -603,10 +447,6 @@ h3 {
   background: radial-gradient(circle, #efc359, rgba(239,195,89,0.2));
 }
 
-.glow-dot.coral {
-  background: radial-gradient(circle, #ff9d7a, rgba(255,157,122,0.2));
-}
-
 .tag {
   margin-top: 22px;
   font-family: Arial, sans-serif;
@@ -617,47 +457,27 @@ h3 {
   color: #7457d9;
 }
 
-.process-section {
-  background:
-    radial-gradient(circle at 20% 25%, rgba(239, 195, 89, 0.32), transparent 30%),
-    radial-gradient(circle at 80% 75%, rgba(116, 87, 217, 0.2), transparent 35%),
-    #f3dcca;
-}
-
-.process-grid span {
-  font-size: 2.4rem;
-  display: inline-block;
-  margin-bottom: 18px;
-}
-
-.credibility {
+.closing-section {
   text-align: center;
   background: #1c1b24;
   color: white;
 }
 
-.credibility .section-label {
+.closing-section .section-label {
   color: #ffc77b;
 }
 
-.credibility p {
+.closing-section p {
   max-width: 760px;
-  margin: 20px auto 0;
+  margin: 24px auto 0;
   font-size: 1.18rem;
-}
-
-.contact {
-  text-align: center;
-}
-
-.contact .btn {
-  margin-top: 30px;
+  color: rgba(255,255,255,0.82);
 }
 
 footer {
   padding: 28px 7%;
   text-align: center;
-  background: #1c1b24;
+  background: #12101b;
   color: rgba(255,255,255,0.7);
 }
 
@@ -673,17 +493,12 @@ footer {
 
   .story-scene {
     position: relative;
-    min-height: 80vh;
+    min-height: 75vh;
   }
 
-  .two-column,
   .demo-section,
-  .card-grid,
-  .skill-grid,
-  .problem-list,
   .project-grid,
-  .process-grid,
-  .before-after-grid {
+  .skill-grid {
     grid-template-columns: 1fr;
   }
 
@@ -693,9 +508,5 @@ footer {
 
   h2 {
     letter-spacing: -1px;
-  }
-
-  .quick-points div {
-    grid-template-columns: 1fr;
   }
 }
