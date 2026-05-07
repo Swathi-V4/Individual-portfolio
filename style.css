@@ -1,0 +1,417 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4efe3;
+  color: #101010;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 7%;
+  background: rgba(244, 239, 227, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 3px solid #101010;
+}
+
+.logo {
+  color: #101010;
+  text-decoration: none;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+nav {
+  display: flex;
+  gap: 24px;
+}
+
+nav a {
+  color: #101010;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+nav a:hover {
+  color: #d82222;
+}
+
+.hero {
+  min-height: 90vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 8% 7%;
+  border-bottom: 3px solid #101010;
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 900px;
+  position: relative;
+  z-index: 2;
+}
+
+.eyebrow,
+.section-label {
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: #d82222;
+  margin-bottom: 18px;
+}
+
+h1 {
+  font-size: clamp(3rem, 8vw, 7.5rem);
+  line-height: 0.92;
+  max-width: 1000px;
+  text-transform: uppercase;
+  letter-spacing: -4px;
+}
+
+h2 {
+  font-size: clamp(2rem, 5vw, 4.5rem);
+  line-height: 1;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+
+h3 {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.hero-text {
+  max-width: 650px;
+  font-size: 1.2rem;
+  margin: 30px 0;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 22px;
+  border: 3px solid #101010;
+  text-decoration: none;
+  color: #101010;
+  font-weight: 900;
+  text-transform: uppercase;
+  transition: 0.25s ease;
+}
+
+.btn.primary {
+  background: #d82222;
+  color: #fff;
+}
+
+.btn.secondary {
+  background: #f2c230;
+}
+
+.btn:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 6px 6px 0 #101010;
+}
+
+.kinetic-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.shape {
+  position: absolute;
+  display: block;
+}
+
+.circle {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: #1d4ed8;
+  right: 8%;
+  top: 16%;
+  animation: floatCircle 8s infinite alternate ease-in-out;
+}
+
+.square {
+  width: 180px;
+  height: 180px;
+  background: #f2c230;
+  right: 22%;
+  bottom: 14%;
+  animation: rotateSquare 12s infinite linear;
+}
+
+.line {
+  width: 420px;
+  height: 22px;
+  background: #101010;
+  right: -80px;
+  top: 52%;
+  transform: rotate(-24deg);
+  animation: slideLine 6s infinite alternate ease-in-out;
+}
+
+.dot {
+  width: 90px;
+  height: 90px;
+  background: #d82222;
+  border-radius: 50%;
+  left: 55%;
+  bottom: 16%;
+  animation: pulseDot 3s infinite alternate ease-in-out;
+}
+
+@keyframes floatCircle {
+  from { transform: translateY(0); }
+  to { transform: translateY(40px); }
+}
+
+@keyframes rotateSquare {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes slideLine {
+  from { transform: translateX(0) rotate(-24deg); }
+  to { transform: translateX(-80px) rotate(-24deg); }
+}
+
+@keyframes pulseDot {
+  from { transform: scale(1); }
+  to { transform: scale(1.25); }
+}
+
+.section {
+  padding: 90px 7%;
+  border-bottom: 3px solid #101010;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 60px;
+}
+
+.about-grid p {
+  font-size: 1.1rem;
+  margin-bottom: 18px;
+}
+
+.style-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-bottom: 3px solid #101010;
+}
+
+.style-card {
+  padding: 50px;
+  min-height: 260px;
+  border-right: 3px solid #101010;
+  transition: 0.3s ease;
+}
+
+.style-card:hover {
+  transform: translateY(-8px);
+}
+
+.style-card.red {
+  background: #d82222;
+  color: #fff;
+}
+
+.style-card.blue {
+  background: #1d4ed8;
+  color: #fff;
+}
+
+.style-card.yellow {
+  background: #f2c230;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 40px;
+}
+
+.project-card {
+  background: #fffaf0;
+  border: 3px solid #101010;
+  padding: 28px;
+  min-height: 420px;
+  transition: 0.3s ease;
+  position: relative;
+}
+
+.project-card:hover {
+  transform: translate(-8px, -8px);
+  box-shadow: 10px 10px 0 #101010;
+}
+
+.project-marker {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 28px;
+}
+
+.red-block {
+  background: #d82222;
+  border-radius: 50%;
+}
+
+.blue-block {
+  background: #1d4ed8;
+}
+
+.yellow-block {
+  background: #f2c230;
+  transform: rotate(45deg);
+}
+
+.project-card ul {
+  margin-top: 24px;
+  padding-left: 20px;
+}
+
+.project-card li {
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.process-line {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 3px solid #101010;
+  margin-top: 40px;
+}
+
+.step {
+  padding: 30px;
+  border-right: 3px solid #101010;
+  background: #fffaf0;
+}
+
+.step:last-child {
+  border-right: none;
+}
+
+.step span {
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 900;
+  color: #d82222;
+  margin-bottom: 20px;
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 35px;
+}
+
+.skill-grid div {
+  background: #101010;
+  color: #fff;
+  padding: 34px;
+  min-height: 220px;
+}
+
+.contact {
+  background: #1d4ed8;
+  color: #fff;
+}
+
+.contact .section-label {
+  color: #f2c230;
+}
+
+.contact p {
+  max-width: 650px;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+footer {
+  padding: 30px 7%;
+  background: #101010;
+  color: #fff;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .site-header {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .about-grid,
+  .style-section,
+  .project-grid,
+  .process-line,
+  .skill-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .style-card,
+  .step {
+    border-right: none;
+    border-bottom: 3px solid #101010;
+  }
+
+  h1 {
+    letter-spacing: -2px;
+  }
+
+  .circle {
+    width: 170px;
+    height: 170px;
+    opacity: 0.45;
+  }
+
+  .square {
+    width: 120px;
+    height: 120px;
+    opacity: 0.45;
+  }
+
+  .line {
+    opacity: 0.35;
+  }
+
+  .dot {
+    opacity: 0.45;
+  }
+}
