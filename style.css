@@ -211,8 +211,7 @@ h3 {
   position: relative;
 }
 
-.two-column,
-.visual-direction {
+.two-column {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
   gap: 60px;
@@ -364,15 +363,18 @@ h3 {
     #f7efe4;
 }
 
-.visual-direction {
-  background: #fff8ef;
-}
-
 .process-section {
   background:
     radial-gradient(circle at 20% 25%, rgba(239, 195, 89, 0.32), transparent 30%),
     radial-gradient(circle at 80% 75%, rgba(116, 87, 217, 0.2), transparent 35%),
     #f3dcca;
+}
+
+.process-intro {
+  max-width: 850px;
+  font-size: 1.15rem;
+  color: #383343;
+  margin-bottom: 38px;
 }
 
 .process-grid {
@@ -442,7 +444,6 @@ footer {
   }
 
   .two-column,
-  .visual-direction,
   .card-grid,
   .skill-grid,
   .problem-list,
