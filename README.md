@@ -1,6 +1,10 @@
 # Individual-portfolio
 
+Website:
 https://swathi-v4.github.io/Individual-portfolio/
+
+Presentation:
+https://www.youtube.com/watch?v=e7N3-LQJifg&t=1s
 
 # Swathi Veerapalli — Aspirational AI Product Engineer Portfolio
 
